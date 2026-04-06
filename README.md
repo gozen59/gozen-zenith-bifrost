@@ -44,7 +44,7 @@ gozen-zenith-bifrost/
 ├── scripts/
 │   ├── install.sh             # Script d'installation
 │   └── setup-pm2-logrotate.sh # Configuration logrotate PM2
-├── ecosystem.config.js        # Configuration PM2
+├── ecosystem.config.cjs       # Configuration PM2
 ├── .env.example               # Variables d'environnement
 └── package.json
 ```
@@ -190,7 +190,7 @@ npm run get-chat-id
 node src/index.js --config ./config/custom.json
 
 # Avec PM2
-pm2 start ecosystem.config.js
+pm2 start ecosystem.config.cjs
 pm2 status
 pm2 logs zenith-bifrost
 pm2 restart zenith-bifrost
@@ -219,7 +219,7 @@ curl http://localhost:8787/health
 ### Démarrage
 
 ```bash
-pm2 start ecosystem.config.js
+pm2 start ecosystem.config.cjs
 ```
 
 ### Logrotate
