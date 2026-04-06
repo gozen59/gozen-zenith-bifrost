@@ -1,0 +1,23 @@
+# Runtime files
+runtime/
+logs/
+
+# Environment
+.env
+
+# Dependencies
+node_modules/
+
+# Config (user-specific)
+config/watcher.config.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local
+plans/

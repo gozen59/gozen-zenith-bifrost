@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "zenith-bifrost",
+    "intervalSec": 60,
+    "quoteCurrency": "eur",
+    "timezone": "Europe/Paris",
+    "enableHttpHealth": true,
+    "healthPort": 8787,
+    "defaultCooldownSec": 3600
+  },
+  "notifications": {
+    "telegram": {
+      "enabled": true,
+      "parseMode": "Markdown"
+    }
+  },
+  "watchers": [
+    {
+      "id": "tao-main",
+      "enabled": true,
+      "coinId": "bittensor",
+      "symbol": "TAO",
+      "quoteCurrency": "eur",
+      "thresholds": [
+        {
+          "name": "first-sell-target",
+          "direction": "above_or_equal",
+          "price": 310.48,
+          "cooldownSec": 3600,
+          "notifyOnRecovery": true,
+          "messageTemplate": "🔔 TAO a atteint le premier palier : {{price}} {{currency}} (objectif {{threshold}})."
+        }
+      ]
+    },
+    {
+      "id": "btc-breakout",
+      "enabled": true,
+      "coinId": "bitcoin",
+      "symbol": "BTC",
+      "quoteCurrency": "usd",
+      "thresholds": [
+        {
+          "name": "breakout-100k",
+          "direction": "above_or_equal",
+          "price": 100000,
+          "cooldownSec": 7200,
+          "notifyOnRecovery": false
+        }
+      ]
+    },
+    {
+      "id": "eth-pullback",
+      "enabled": true,
+      "coinId": "ethereum",
+      "symbol": "ETH",
+      "quoteCurrency": "eur",
+      "thresholds": [
+        {
+          "name": "buy-zone",
+          "direction": "below_or_equal",
+          "price": 2200,
+          "cooldownSec": 7200,
+          "notifyOnRecovery": true
+        }
+      ]
+    }
+  ]
+}

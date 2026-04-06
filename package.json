@@ -1,0 +1,29 @@
+{
+  "name": "zenith-bifrost",
+  "version": "1.0.0",
+  "description": "Surveillance multi-crypto avec alertes Telegram, basée sur CoinGecko",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test-telegram": "node src/index.js --test-telegram",
+    "get-chat-id": "node src/index.js --get-chat-id",
+    "once": "node src/index.js --once"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "keywords": [
+    "crypto",
+    "watcher",
+    "telegram",
+    "coingecko",
+    "alerts"
+  ],
+  "license": "MIT",
+  "private": true
+}
