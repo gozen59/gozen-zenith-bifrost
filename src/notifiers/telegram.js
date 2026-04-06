@@ -70,7 +70,12 @@ export async function getChatId() {
   });
   const data = await res.json();
 
-  if (!data.ok || !data.result?.length) {
+  if (!data.ok) {
+    console.error('❌ Erreur de l\'API Telegram:', data.description);
+    return;
+  }
+
+  if (!data.result?.length) {
     console.log('Aucun message trouvé. Envoyez un message au bot puis relancez cette commande.');
     return;
   }
